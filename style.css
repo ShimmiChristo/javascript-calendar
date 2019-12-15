@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+#calendar-container {
+  display: grid;
+  width: 600px;
+}
+#title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.button {
+  cursor: pointer;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  background: #bebebe;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.button:hover {
+  background: #c8c8c8;
+}
+#back::before {
+  content: '';
+  left: 10px;
+  top: 12px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(225deg);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#back:after {
+  content: '';
+  left: 20px;
+  top: 12px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(225deg);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#next::before {
+  content: '';
+  right: 10px;
+  top: 12px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#next:after {
+  content: '';
+  right: 20px;
+  top: 12px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#calendar {
+  display: grid;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 4px;
+}
+#calendar .head {
+  border-bottom: solid 1px;
+}
+#calendar .row {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+}
+#calendar .row .cell {
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+}
+.weekend {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
